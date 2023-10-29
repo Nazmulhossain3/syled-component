@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Input from "./component/Input";
+import Button from "./component/Button";
 
 function App() {
   
@@ -15,7 +16,9 @@ function App() {
       
       </InputContainer>
 
-
+    <ButtonContainer>
+      <Button content='Sign Up' />
+  </ButtonContainer>
 
 
     </MainContainer>
@@ -80,13 +83,21 @@ margin : 3rem 0 2rem 0;
 `;
 
 const InputContainer = styled.div`
-display : flex;
-flex-direction : column;
-justify-content : space-around;
-align-item : center;
-height : 20%;
-width : 100%
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+`;
 
-`
+
+const ButtonContainer = styled.div`
+  margin: 1rem 0 2rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export default App
