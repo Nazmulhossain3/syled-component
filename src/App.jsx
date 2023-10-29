@@ -1,9 +1,19 @@
 import styled from "styled-components"
 import Input from "./component/Input";
 import Button from "./component/Button";
+import { FaFacebookF, FaGoogle, FaGithubAlt } from "react-icons/fa";
+import Icon from "./component/Icon";
 
 function App() {
-  
+  const FacebookBackground =
+    "linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)";
+
+    const GoogleBackground = "#4285F4"; // This color represents the blue from the Google logo
+
+
+
+    const GitHubBackground = "linear-gradient(to right, #24292e, #2f363d)";
+
 
   return (
     <>
@@ -20,6 +30,22 @@ function App() {
       <Button content='Sign Up' />
   </ButtonContainer>
 
+    <SocialLogin>Or Login With</SocialLogin>
+    <HorizentalRole></HorizentalRole>
+    <IconContainer>
+    <Icon color={FacebookBackground}>
+      <FaFacebookF></FaFacebookF>
+    </Icon>
+    <Icon color={GoogleBackground}>
+     <FaGoogle></FaGoogle>
+    </Icon>
+    <Icon color={GitHubBackground}>
+    <FaGithubAlt></FaGithubAlt>
+    </Icon>
+
+
+    </IconContainer>
+    <ForgotPassword>Forgot Password ?</ForgotPassword>
 
     </MainContainer>
     </>
@@ -99,5 +125,36 @@ const ButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+  const SocialLogin = styled.h5`
+  cursor : pointer;
+  
+  `
+
+  const HorizentalRole = styled.hr`
+  width: 90%;
+  height: 0.3rem;
+  border-radius: 0.8rem;
+  border: none;
+  background: linear-gradient(to right, #14163c 0%, #03217b 79%);
+  background-color: #ebd0d0;
+  margin: 1.5rem 0 1rem 0;
+  backdrop-filter: blur(25px);
+  
+  `;
+
+
+  const IconContainer = styled.div`
+  display : flex;
+  justify-content : space-evenly;
+  margin : 2rem 0 3rem 0 ;
+  width : 80%
+`
+
+const ForgotPassword = styled.h5`
+cursor : pointer;
+
+
+`
 
 export default App
