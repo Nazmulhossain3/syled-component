@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Input from "./component/Input";
 
 function App() {
   
@@ -8,6 +9,11 @@ function App() {
     <MainContainer>
 
       <WelcomeText>Welcome</WelcomeText>
+      <InputContainer>
+      <Input type='text' placeholder='Email'></Input>
+      <Input type='Password' placeholder='Password'></Input>
+      
+      </InputContainer>
 
 
 
@@ -70,6 +76,16 @@ const MainContainer = styled.div`
 const WelcomeText = styled.h2`
 
 margin : 3rem 0 2rem 0;
+
+`;
+
+const InputContainer = styled.div`
+display : flex;
+flex-direction : column;
+justify-content : space-around;
+align-item : center;
+height : 20%;
+width : 100%
 
 `
 
